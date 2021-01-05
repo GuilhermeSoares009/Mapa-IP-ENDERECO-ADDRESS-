@@ -1,0 +1,192 @@
+*{
+    margin:0px;
+}
+
+body{
+        width: 1366px;
+}
+
+#principal{
+    display:block;
+}
+/*Mapa*/
+#mapid{
+    width:100%;
+    height: 1246px;
+    z-index: 0;
+}
+
+
+/*Topo */
+
+#topo{
+    background-image: url("../img/pattern-bg.png");
+    width: 100%;
+    height: 250px;
+}
+
+header h1{
+    font-size: 30pt;
+    font-family:Arial, Helvetica, sans-serif;
+    Color: white;
+}
+#topo header{
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+#topo div form{
+    display: inline-flex;
+}
+
+#topo div input{
+    outline: none;
+    height: 50px;
+    border:1px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 550px;
+    text-align: center;
+    font-size: 19pt;
+    font-family: arial;
+}   
+
+
+div form #seta{
+    width:39px;
+    background-color: black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+form #seta img{
+    margin: auto;
+}
+
+
+/*Meio*/
+div#info{
+    width: 62%;
+    height: 154px;
+    background-color: white;  
+    position: absolute;
+    margin-top:-133px;
+    margin-left:18%;
+    z-index: 1;    
+    border: 1px solid black;
+    border-radius: 28px;
+    display: grid;
+}
+
+
+div#info div{
+    grid-row: 1;
+}
+#info div.espaco{
+    margin:42px;
+}
+
+.linha{
+    height: 100px;
+    border-left: 1px solid #dcd9d9;
+    margin-top: 19px;
+}
+
+.titulos{
+    color: #949494;
+    font-size: 10pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top:-10px
+}
+
+.conteudo{
+    color: black;
+    font-size: 15pt;
+    font-family: arial;
+    margin-top: 12px;
+}
+
+/*MEDIAS*/
+
+@media (max-width: 765px)
+{
+    body{
+        overflow-x:hidden;
+    }
+    /*Aumentei a altura do espaço azul forte*/
+    #topo{
+        height: 883px
+    }
+
+    /*Aumentei a fonte do titulo h1 Ip address Tracker*/
+    header h1 {
+        font-size: 78pt;
+    }
+
+    /*Adaptei o input para o mobile*/
+    #topo div input {
+        height: 167px;
+        border-top-left-radius: 31px;
+        border-bottom-left-radius: 31px;
+        width: 950px;
+        font-size: 46pt;
+    }
+
+    /*Ajeitei a area que contem todos os espacos */
+    div#info {
+        width: 336%;
+        height: 634px;
+        margin-top: -521px;
+        margin-left: 39%;
+        text-align: center;
+    }
+
+    /*Eu dei um margi na area "espaço" em cima e em baixo */
+    #info div.espaco
+    {
+        margin: 29px 0px;
+    }
+
+    /*Ajeitei a largura e borda do conteiner(div) que contem a seta*/
+    div form #seta {
+    width: 104px;
+    border-top-right-radius: 31px;
+    border-bottom-right-radius: 31px;
+    }
+
+    /*Aumentei a imagem da seta*/
+    #seta img{
+        width: 50px;
+    }
+
+    /*Reitirei as linhas laterais*/
+    div.linha{ 
+        display: none;
+    }
+
+    /*Enfileirei os espacos*/
+    div#info{
+        display: block;
+    }
+
+    /*Aumentei a letra dos titulos do conteudo*/
+    .titulos{
+        font-size: 25pt;
+    }
+
+    /*Aumentei letra do conteudo*/
+    .conteudo{
+        font-size: 45pt;
+        font-weight: 600;
+    }
+
+    /*Retirei o mapa para que possam usar o touch*/
+    div.leaflet-control-zoom 
+    {
+        display: none;
+    }

@@ -2,8 +2,8 @@
     margin:0px;
 }
 
-body{
-        width: 1366px;
+Html, body{
+     width: 1400px;
 }
 
 #principal{
@@ -111,26 +111,188 @@ div#info div{
     margin-top: 12px;
 }
 
-/*MEDIAS*/
+/*
+====================================
+========== M E D I A S =============
+====================================
+*/
 
-@media (max-width: 765px)
+/*Tela de Smartphone 320px ou menor*/
+@media (max-width: 320px){
+    #topo header
+    {
+        margin-right: 10%;
+        padding: 80px;
+    }
+
+    div#info{
+        top: 105%;
+        left: 17%;
+        width: 325%;
+    }
+
+
+       /*Eu dei um margi na area "espaço" em cima e em baixo */
+   #info div.espaco
+   {
+       margin: 25px 0px;
+   }
+
+   /*Diminuo fonte*/
+   .titulos{
+    font-size: 32pt;
+   }
+
+   /*Diminuo fonte*/
+   .conteudo{
+    font-size: 40pt;
+   }
+
+    /*Diminuo fonte*/
+   header h1 {
+        font-size: 63pt;
+    }   
+
+    #topo div input{
+        font-size: 42pt;
+        height: 149px;
+    }
+}
+
+
+/*Tela de Smartphone 321px e 375px*/
+@media (min-width: 321px) and (max-width:375px)
+{
+        /*Área do conteúdo*/
+    div#info{
+        top: 105%;
+        left: 17%;
+        width: 300%;
+    }
+
+       /*Eu dei um margi na area "espaço" em cima e em baixo */
+   #info div.espaco
+   {
+       margin: 29px 0px;
+   }
+
+   /*Diminuo fonte*/
+   .titulos{
+    font-size: 27pt;
+   }
+
+   /*Diminuo fonte*/
+   .conteudo{
+    font-size: 40pt;
+   }
+
+    /*Diminuo fonte*/
+   header h1 {
+        font-size: 63pt;
+    }   
+
+    #topo div input{
+        font-size: 42pt;
+        height: 149px;
+    }
+}
+
+
+/*Tela de Smartphone 376px ou 425px*/
+@media (min-width: 376px) and (max-width: 425px)
+{
+    /*Altero área das informações*/
+    div#info{
+        width: 300%;
+    }
+       /*Eu dei um margi na area "espaço" em cima e em baixo */
+   #info div.espaco
+   {
+       margin: 29px 0px;
+   }
+
+   /*Diminuo fonte*/
+   .titulos{
+    font-size: 23pt;
+   }
+
+   /*Diminuo fonte*/
+   .conteudo{
+    font-size: 40pt;
+   }
+
+    /*Diminuo fonte*/
+   header h1 {
+        font-size: 63pt;
+    }   
+
+    #topo div input{
+        font-size: 42pt;
+        height: 149px;
+    }
+}
+
+
+
+@media (min-width: 426px) and ( max-width: 768px)
+{
+
+    #topo 
+    {
+        height: 701px;
+    }
+    div#info {
+        width: 135%;
+        height: 601px;
+        left: 25%;
+        top: 63%;
+        height: 183px;
+        margin: 0%;
+    }
+
+    /*Aumento espaço de dentro doss conteuúdos*/
+    #info div.espaco{
+        margin:63px;
+    }
+
+   /*Eu dei um margi na area "espaço" em cima e em baixo */
+   #info div.espaco
+   {
+       margin: 29px 0px;
+   }
+
+   /*Diminuo fonte*/
+   .titulos{
+    font-size: 23pt;
+   }
+
+   /*Diminuo fonte*/
+   .conteudo{
+    font-size: 40pt;
+   }
+
+    /*Diminuo fonte*/
+   header h1 {
+        font-size: 63pt;
+    }   
+
+    #topo div input{
+        font-size: 42pt;
+        height: 149px;
+    }
+}
+
+
+/*Tela de tablet 769px ou menor*/
+@media (max-width: 768px)
 {
     body{
         overflow-x:hidden;
     }
-    /*Aumentei a altura do espaço azul forte*/
-    #topo{
-        height: 883px
-    }
 
-    /*Aumentei a fonte do titulo h1 Ip address Tracker*/
-    header h1 {
-        font-size: 78pt;
-    }
 
     /*Adaptei o input para o mobile*/
     #topo div input {
-        height: 167px;
         border-top-left-radius: 31px;
         border-bottom-left-radius: 31px;
         width: 950px;
@@ -139,18 +301,11 @@ div#info div{
 
     /*Ajeitei a area que contem todos os espacos */
     div#info {
-        width: 336%;
-        height: 634px;
-        margin-top: -521px;
-        margin-left: 39%;
+        height: 599px;
         text-align: center;
     }
 
-    /*Eu dei um margi na area "espaço" em cima e em baixo */
-    #info div.espaco
-    {
-        margin: 29px 0px;
-    }
+
 
     /*Ajeitei a largura e borda do conteiner(div) que contem a seta*/
     div form #seta {
@@ -174,14 +329,10 @@ div#info div{
         display: block;
     }
 
-    /*Aumentei a letra dos titulos do conteudo*/
-    .titulos{
-        font-size: 25pt;
-    }
+
 
     /*Aumentei letra do conteudo*/
     .conteudo{
-        font-size: 45pt;
         font-weight: 600;
     }
 
@@ -190,3 +341,4 @@ div#info div{
     {
         display: none;
     }
+}

@@ -10,8 +10,10 @@ Class keyApi
     /*Variavel que guardo o ip do usuario */
     private $ip = "";
 
-    /*Ao instanciar a classe passo a chave que está sendo passada passada no index
-    e salvo na variavel key desta classe */
+    /*Ao instanciar a classe passo a chave que está sendo transportada no index
+    e salvo na variavel key desta classe
+    O null é em caso de não receber nada
+     */
     function __construct($key = null)
     {  
        if(!empty($key)) $this->key = $key;
@@ -27,7 +29,9 @@ Class keyApi
     function request ($endpoint = '', $parametros =  array())
     {
 
-        /* Verifico se a url possui o ip*/
+        /* Verifico se existe algo dentro do ip
+
+        */
         if(strlen($this->ip) != 0)
         {
             $url = "https://geo.ipify.org/".$endpoint."?apiKey=".$this->key."&ipAddress=".$this->ip."&format=json";
@@ -36,7 +40,7 @@ Class keyApi
             $url = "https://geo.ipify.org/".$endpoint."?apiKey=".$this->key."&format=json";
         }
 
-        /*Se o parametro for um array, ele é de qualquer forma já que está inicializado como um, continua o procedimento */
+        /*Se o parametro for um array, ele de qualquer forma já que está inicializado como um, continua o procedimento */
         if(is_array($parametros))
         {
             /*Adiciono a url o que foi passado dentro da variavel parametros */
@@ -69,20 +73,23 @@ Class keyApi
         return $this->error;
     }
 
-    /*A função country ou País retorna o array com todas as
+    /*A função country ou País, retorna o array com todas as
      informações sobre a localização do usuario */
     function country()
     {
-        /*Função qu retornou o array com informações */
+        /*Função que retornou o array com informações */
         $data = $this->request("/api/v1");
 
-        /**SE não estiver vazio e for um array a variavel data*/
+        /**SE não estiver vazio e for um array a variavel: data
+         * continuamos a programação
+        */
         if(!empty($data) && is_array($data['location']))
         {
-            /*Nos apresentamos falso para o erro */
+            /*Nós apresentamos falso para o erro */
             $this->error = false;
             
-            /*Retornamos o array especifico $data['location']*/
+            /*Retornamos o array especifico $data['location']
+              Nesse caso, um array mais geral*/
             return $data;
         }
         else{

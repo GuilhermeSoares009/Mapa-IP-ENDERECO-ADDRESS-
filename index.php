@@ -1,5 +1,5 @@
 <?php
-/*
+
     require_once 'api/config/config.php';
     require_once 'api/modules/keyApi.php';
     
@@ -19,14 +19,9 @@
     $cidade = $local['location']['city'];
     $região = $local['location']['region'];
     $timezone = $local['location']['timezone'];
-    */
-    $ip = "172.0.0.1";
-    $lat = 10;
-    $lng = 10;
-    $cidade = "SLZ";
-    $região = "MA";
-    $timezone = "UTF -8";
+    //Endereço padrão
 ?>
+
 
 
 <!DOCTYPE html>

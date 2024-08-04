@@ -1,3 +1,3 @@
 <?php
-    define('chave','at_vUhNb9ACezyaQbyaPh4efmFHdMeWY');
+    define('chave','YOUR_API');
 ?>
